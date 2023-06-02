@@ -180,7 +180,6 @@ class mongodb::server::config {
       owner   => 'root',
       group   => 'root',
       mode    => '0600',
-      require => [Mongodb::Db['admin']]
     }
   }
 }
