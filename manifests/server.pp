@@ -136,7 +136,6 @@ class mongodb::server (
 
     # Make sure it runs before other DB creation
     Mongodb::Db['admin'] -> Mongodb::Db <| title != 'admin' |>
-    Mongodb::Db['admin'] -> Class['mongodb::server::config']
   }
 
   # Set-up replicasets
